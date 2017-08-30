@@ -13,7 +13,8 @@
     
     git clone https://github.com/wtayyeb/pr1.git
     pip install -U -r pr1/requirement.txt
-
+    ln -s /home/user1/pr1-venv/pr1/pr1.supervisor.conf /etc/supervisor/conf.d/pr1.conf
+    supervisorctl start pr1-wsgi
 
 ## Upgrade
     cd ~/pr1-venv
@@ -22,4 +23,6 @@
     cd pr1/
     git pull origin master
     pip install -U -r requirement.txt
+    supervisorctl stop pr1-wsgi
+    supervisorctl start pr1-wsgi
 
