@@ -3,6 +3,7 @@
 ## Prepare environment ( one time )
     # apt install python-dev -y
     apt install virtualenv -y
+    useradd user1 && mkdir /home/user1
     
     
 ## Installation ( one time )
