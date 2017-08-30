@@ -24,5 +24,6 @@
     git pull origin master
     pip install -U -r requirement.txt
     supervisorctl stop pr1-wsgi
+    supervisorctl reload
     supervisorctl start pr1-wsgi
 
