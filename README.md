@@ -5,7 +5,7 @@
     apt install virtualenv -y
     
     
-## installation ( one time )
+## Installation ( one time )
     cd ~
     virtualenv pr1-venv
     cd pr1-venv
@@ -14,7 +14,7 @@
     git clone https://github.com/wtayyeb/pr1.git
     pip install -U -r pr1/requirement.txt
     ln -s /home/user1/pr1-venv/pr1/pr1.supervisor.conf /etc/supervisor/conf.d/pr1.conf
-    supervisorctl start pr1-wsgi
+    supervisorctl start pr1_uwsgi
 
 ## Upgrade
     cd ~/pr1-venv
@@ -23,7 +23,9 @@
     cd pr1/
     git pull origin master
     pip install -U -r requirement.txt
-    supervisorctl stop pr1-wsgi
+    supervisorctl stop pr1_uwsgi
     supervisorctl reload        # if supervisor conf edited
-    supervisorctl start pr1-wsgi
+    supervisorctl start pr1_uwsgi
+    
+    # upgrade steps included in upgrade.sh
 
