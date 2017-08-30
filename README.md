@@ -18,7 +18,8 @@
 ## Upgrade
     cd ~/pr1-venv
     . bin/activate   # source
-    
+
+    cd pr1/
     git pull origin master
-    pip install -U -r pr1/requirement.txt
+    pip install -U -r requirement.txt
 
